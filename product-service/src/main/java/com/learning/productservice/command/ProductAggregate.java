@@ -38,6 +38,7 @@ public class ProductAggregate {
         this.quantity = productCreatedEvent.getQuantity();
         this.title = productCreatedEvent.getTitle();
 
+
     }
 
 }
