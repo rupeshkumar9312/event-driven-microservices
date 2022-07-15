@@ -12,7 +12,7 @@ import java.util.UUID;
 @Slf4j
 @RestController
 @RequestMapping("/products")
-public class ProductController {
+public class ProductCommandController {
 
     @Autowired
     private CommandGateway commandGateway;
