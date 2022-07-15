@@ -8,6 +8,17 @@ spring:
     url: jdbc:postgresql://localhost:5432/users_db
     username: postgres
     password: root
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
   # JPA properties
   jpa:
     hibernate:
@@ -25,3 +36,4 @@ eureka:
       defaultZone: http://localhost:8080/eureka
   instance:
     instance-id: ${spring.application.name}:${instance-id:${random.value}}
+
